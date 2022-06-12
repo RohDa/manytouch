@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/ManyTouch/Css/touch.css" />
+<script src="/ManyTouch/Js/main.js"></script>
+<style type="text/css">
+    .many{
+    color:green;
+    font-size: 40px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+/* 화장품 이미지 */
+.container {
+    padding: 200px 0;
+}
+
+.hwajangs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hwajang{
+width: 120px;
+height: 124px;
+margin: 6px;
+background-color: #777;
+border: 3px solid #fff;
+transform: skewX(-14deg);
+border-radius: 10px;
+box-sizing: border-box;
+transition: transform .1s, background-color .6s;
+overflow: hidden;
+}
+
+.hwajang:hover{
+background-color: aqua;
+transform: skewX(-14deg) scale(1.3);
+z-index: 1;
+}
+
+.hwajang .image{
+width: 130%;
+height: 100%;
+background-size: cover;
+transform: translateX(-11px) scaleY(14deg);
+background-position: center;
+}
+.hwajang:nth-child(1) .image {
+    background-image: url("/ManyTouch/Image/eye/z1.png");
+    cursor: pointer;
+}
+
+.hwajang:nth-child(2) .image {
+    background-image: url("/ManyTouch/Image/eye/z8.png");
+    cursor: pointer;
+}
+
+h1.title {
+    padding: 100px 50;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hwajangs2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hwajang2{
+width: 120px;
+height: 124px;
+margin: 6px;
+background-color: #777;
+border: 3px solid #fff;
+transform: skewX(-14deg);
+border-radius: 10px;
+box-sizing: border-box;
+transition: transform .1s, background-color .6s;
+overflow: hidden;
+}
+
+.hwajang2:hover{
+background-color: aqua;
+transform: skewX(-14deg) scale(1.3);
+z-index: 1;
+}
+
+.hwajang2 .image{
+width: 130%;
+height: 100%;
+background-size: cover;
+transform: translateX(-11px) scaleY(14deg);
+background-position: center;
+}
+.hwajang2:nth-child(1) .image {
+    background-image: url("/ManyTouch/Image/eye/z8.png");
+    cursor: pointer;
+}
+
+.hwajang2:nth-child(2) .image {
+    background-image: url("/ManyTouch/Image/eye/z12.png");
+    cursor: pointer;
+}
+
+.hwajangs3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 660px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hwajang3{
+width: 120px;
+height: 124px;
+margin: 6px;
+background-color: #777;
+border: 3px solid #fff;
+transform: skewX(-14deg);
+border-radius: 10px;
+box-sizing: border-box;
+transition: transform .1s, background-color .6s;
+overflow: hidden;
+}
+
+.hwajang3:hover{
+background-color: aqua;
+transform: skewX(-14deg) scale(1.3);
+z-index: 1;
+}
+
+.hwajang3 .image{
+width: 130%;
+height: 100%;
+background-size: cover;
+transform: translateX(-11px) scaleY(14deg);
+background-position: center;
+}
+.hwajang3:nth-child(1) .image {
+    background-image: url("/ManyTouch/Image/etude/e28.png");
+    cursor: pointer;
+}
+
+.hwajang3:nth-child(2) .image {
+    background-image: url("/ManyTouch/Image/etude/e32.png");
+    cursor: pointer;
+}
+    /*common*/
+    body {
+        background-image: url("/ManyTouch/Image/Backgroundiamage/background6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    body {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    }
+    a {
+    color: inherit;
+    }
+    a{
+    text-decoration: none;
+    }
+    .inner{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    }
+    h1{
+        text-align: center;
+    }
+
+    /*header*/
+    header {
+    background-image: url("/ManyTouch/Image/Backgroundiamage/background6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    header {
+    list-style:none;
+    background-color:#fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    border-bottom: 1px solid white;
+    }
+
+    header > .inner{
+    height: 120px;
+    }
+
+    header .logo{
+    height: 75px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    }
+
+    header .sub-menu{
+    list-style:none;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    display: flex;
+    }
+
+    header .sub-menu ul.menu{
+    list-style:none;
+    font-family: Arial, sans-serif;
+    display: flex;
+    }
+
+    header .sub-menu ul.menu li{
+    list-style:none;
+    position: relative;
+    }
+
+    header .sub-menu ul.menu li::before{
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    }
+
+    header .sub-menu ul.menu li:first-child::before{
+    display: none;
+    }
+
+    header .sub-menu ul.menu li a{
+    padding: 11px 16px;
+    display: block;
+    font-size: 13px;
+    color: #656565;
+    }
+
+    header .sub-menu ul.menu li a:hover{
+    color: #000;
+    }
+
+    header .sub-menu .search{
+    position: relative;
+    height: 34px;
+    }
+
+    header .sub-menu .search input{
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+    transition: width .4s;
+    }
+
+    header .sub-menu .search input:focus{
+    width: 190px;
+    border-color: aquamarine;
+    }
+
+    header .sub-menu .search .material-icons{
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    transition: .4s;
+    }
+
+    header .sub-menu .search.focused .material-icons{
+    opacity: 0;
+    }
+
+    header .main-menu{
+    list-style:none;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    }
+
+    header .main-menu .item .item_name{
+    list-style:none;
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    }
+
+    header .main-menu .item:hover .item_name{
+    list-style:none;
+    background-color: #2c2a29;
+    color: #ee2525;
+    border-radius: 6px 6px 0 0;
+    }
+
+    header .main-menu .item .item_contents{
+    background-color: #2c2a29;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+    }
+
+    header .main-menu .item:hover .item_contents{
+    display: block;
+    }
+
+    header .main-menu .item .item_name .item_contents{
+    list-style:none;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    }
+
+    header .main-menu .item .item_contents .contents_menu{
+    background-color: #2c2a29;
+    }
+
+    header .main-menu .item .item_contents .contents_menu > ul{
+    padding: 20px 0;
+    display: flex;
+    }
+
+    header .main-menu .item .item_contents .contents_menu > ul > li {
+    width: 220px;
+    }
+
+    header .main-menu .item .item_contents .contents_menu > ul > li h4{
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+    color: #fff;
+    }
+
+    header .main-menu .item .item_contents .contents_menu > ul > li ul li{
+    padding: 5px 0;
+    font-size: 12px;
+    color: #999;
+    cursor: pointer;
+    }
+
+    header .main-menu .item .item_contents .contents_menu > ul > li ul li:hover{
+    color: #ee2525;
+    }
+
+    header .main-menu .item .item_contents .contents_texture{
+    padding: 26px 0;
+    font-size: 12px;
+
+    }
+
+    header .main-menu .item .item_contents .contents_texture h4{
+    color: #999;
+    font-weight: 900;
+    }
+
+    header .main-menu .item .item_contents .contents_texture p{  
+    color: #ee2525;
+    margin: 4px 0 10px;
+    }
+</style>
+    <title>touch</title>
+</head>
+<body>
+    <header>
+        <div class="many">
+            <a href="/ManyTouch/manytouch.html">ManyTouch</a>
+            </div>
+        <div class="inner">
+            <div class="sub-menu">
+                <ul class="menu">
+                    <li>
+                        <a href="/signin">로그인</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">마이페이지</a>
+                    </li>
+                </ul>
+                <section>
+                        <div class="search">
+                            <input type="text"/>
+                            <span class="material-icons">search</span>
+                        </div>
+                    </form>
+                </section>
+            </div>
+        <ul class="main-menu">
+            <li class="item">
+                <div class="item_name">화장품 브랜드</div>
+                <div class="item_contents">
+                    <div class="contents_menu">
+                        <ul class="inner">
+                            <li>
+                                <h4><a href="/ManyTouch/MainForder/touchE.html">에뛰드</a></h4>
+                                <ul>
+                                    <li><a href="/ManyTouch/MainForder/touchE.html">스킨케어</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchE.html">아이</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchE.html">페이스</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchE.html">립</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h4><a href="/ManyTouch/MainForder/touchN.html">네이처리퍼블릭</a></h4>
+                                <ul>
+                                    <li><a href="/ManyTouch/MainForder/touchN.html">스킨케어</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchN.html">베이스 메이크업</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchN.html">선케어</a></li>
+    
+                                </ul>
+                            </li>
+                            <li>
+                                <h4><a href="/ManyTouch/MainForder/touchO.html">올리브영</a></h4>
+                                <ul>
+                                    <li><a href="/ManyTouch/MainForder/touchO.html">스킨케어</a></li>
+                                    <li><a href="/ManyTouch/MainForder/touchO.html">마스크팩</a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                            </div>
+                    </div>
+                </li>
+            <li class="item">
+                <div class="item_name">화장품 종류</div>
+                <div class="item_contents">
+                    <div class="contents_menu">
+                        <ul class="inner">
+                        <li>
+                            <h4><a href="/ManyTouch/MainForder/touchL.html">립</a></h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchL.html">립스틕</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchL.html">틴트</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchL.html">립글로스</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4><a href="/ManyTouch/MainForder/touchI.html">아이</a></h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchI.html">섀도우</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchI.html">마스카라</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchI.html">아이라이너</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4><a href="/ManyTouch/MainForder/touchH.html">향수</a></h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchH.html">향수</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4><a href="/ManyTouch/MainForder/touchZ.html">네일</a></h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchZ.html">네일컬러</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchZ.html">네이케어</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                        </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item_name">남성</div>
+                <div class="item_contents">
+                    <div class="contents_menu">
+                        <ul class="inner">
+                        <li>
+                            <h4><a href="/ManyTouch/MainForder/touchM.html">남성</a></h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchM.html">스킨/로션</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchM.html">향수</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                        </div>
+                </div>
+            </li>
+            <li class="item">
+                <div class="item_name">화장품BEST</div>
+                <div class="item_contents">
+                    <div class="contents_menu">
+                        <ul class="inner">
+                        <li>
+                            <h4>인기순</h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchE.html">스킨케어</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchI.html">섀도우</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchI.html">마스카라</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchL.html">립</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h4>브랜드순</h4>
+                            <ul>
+                                <li><a href="/ManyTouch/MainForder/touchE.html">에뛰드</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchN.html">네이처리퍼블릭</a></li>
+                                <li><a href="/ManyTouch/MainForder/touchO.html">올리브영</a></li>
+                            </ul>
+                        </li>
+                        </ul>
+                        </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </header>
+    <div class="container">
+        <h1 class="title">네일컬러</h1>
+      <div class="hwajangs">
+            <div class="hwajang">
+                <a href="/ManyTouch/Touch3/touchZcopy1.html">
+                <div class="image"></div>
+                </a>
+            </div>
+            <div class="hwajang">
+                <a href="/ManyTouch/Touch3/touchZcopy2.html">
+                <div class="image"></div>
+                </a>
+            </div>
+      </div>
+      <h1 class="title">네일케어</h1>
+      <div class="hwajangs2">
+            <div class="hwajang2">
+                <a href="/ManyTouch/Touch3/touchZcopy2.html">
+                <div class="image"></div>
+                </a>
+            </div>
+            <div class="hwajang2">
+                <a href="/ManyTouch/Touch3/touchZcopy3.html">
+                <div class="image"></div>
+                </a>
+            </div>
+      </div>
+  </div>
+</body>
+</html>
